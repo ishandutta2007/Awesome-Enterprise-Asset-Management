@@ -58,7 +58,7 @@ The SaaS EAM space consists of enterprise-grade suites integrated into corporate
 
 Open-source CMMS and EAM software gives organizations complete ownership of sensitive asset data, eliminates per-user SaaS license fees, and allows deep custom developer integrations. 
 
-Sorted by **GitHub Star Count (Descending)**:
+Sorted by **GitHub Stars_Count (Descending)**:
 
 - **[NetBox](https://github.com/netbox-community/netbox)** [<img src="https://img.shields.io/github/stars/netbox-community/netbox?style=social&color=white" alt="NetBox Stars"/>](https://github.com/netbox-community/netbox/stargazers) 📡
   The premier open-source Infrastructure Resource Management (IRM) and IP Address Management (IPAM) platform designed for data centers and network asset tracking. Built on Django/Python. **Apache-2.0**.
@@ -107,7 +107,7 @@ Contributions are warmly welcome! If you'd like to add a new EAM/CMMS tool or up
 
 1. **Fork** this repository.
 2. Edit `README.md` keeping formatting, tables, and links consistent.
-3. Ensure pricing, free trial, and star badges are accurate.
+3. Ensure pricing, free trial, and Stars_Badges are accurate.
 4. Submit a **Pull Request** with a brief note explaining your addition.
 
 Please visit [Awesome-Awesome-Awesome](https://github.com/ishandutta2007/Awesome-Awesome-Awesome) for more curated lists!

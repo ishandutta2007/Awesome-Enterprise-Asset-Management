@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="50%" stop-color="#1e1b4b" />
+      <stop offset="100%" stop-color="#0284c7" />
+    </linearGradient>
+    
+    <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="50%" stop-color="#818cf8" />
+      <stop offset="100%" stop-color="#c084fc" />
+    </linearGradient>
+
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <style>
+      .title {
+        font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+        font-size: 44px;
+        font-weight: 800;
+        fill: url(#textGrad);
+      }
+      .subtitle {
+        font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+        font-size: 20px;
+        font-weight: 500;
+        fill: #94a3b8;
+      }
+      .badge-text {
+        font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+        font-size: 14px;
+        font-weight: 600;
+        fill: #e2e8f0;
+      }
+      .pulse-node {
+        animation: pulse 3s infinite ease-in-out;
+      }
+      @keyframes pulse {
+        0%, 100% { opacity: 0.3; transform: scale(1); }
+        50% { opacity: 0.8; transform: scale(1.05); }
+      }
+      .floating-card {
+        animation: float 6s infinite ease-in-out;
+      }
+      @keyframes float {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-10px); }
+      }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="360" rx="16" fill="url(#bg)" />
+
+  <!-- Animated Dynamic Background Elements (positioned in background behind text) -->
+  <g opacity="0.25">
+    <circle cx="150" cy="80" r="120" fill="#38bdf8" class="pulse-node" />
+    <circle cx="1050" cy="280" r="160" fill="#818cf8" class="pulse-node" style="animation-delay: 1.5s;" />
+    
+    <!-- Grid overlay pattern -->
+    <path d="M 0 60 L 1200 60 M 0 120 L 1200 120 M 0 180 L 1200 180 M 0 240 L 1200 240 M 0 300 L 1200 300" stroke="#334155" stroke-width="1" stroke-dasharray="4 4" />
+    <path d="M 200 0 L 200 360 M 400 0 L 400 360 M 600 0 L 600 360 M 800 0 L 800 360 M 1000 0 L 1000 360" stroke="#334155" stroke-width="1" stroke-dasharray="4 4" />
+  </g>
+
+  <!-- Flowchart / Ecosystem Background Node Graphics -->
+  <g transform="translate(820, 60)" class="floating-card" opacity="0.85">
+    <rect width="320" height="240" rx="12" fill="#0f172a" stroke="#38bdf8" stroke-width="1.5" opacity="0.9" />
+    <text x="20" y="40" font-family="'Segoe UI', sans-serif" font-size="16" font-weight="bold" fill="#38bdf8">⚙️ EAM &amp; CMMS Ecosystem</text>
+    
+    <!-- Mini cards inside graphic -->
+    <rect x="20" y="60" width="130" height="65" rx="8" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+    <text x="30" y="85" font-family="sans-serif" font-size="12" fill="#e2e8f0" font-weight="bold">IBM Maximo</text>
+    <text x="30" y="105" font-family="sans-serif" font-size="10" fill="#94a3b8">Enterprise Tier</text>
+
+    <rect x="170" y="60" width="130" height="65" rx="8" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+    <text x="180" y="85" font-family="sans-serif" font-size="12" fill="#e2e8f0" font-weight="bold">Snipe-IT</text>
+    <text x="180" y="105" font-family="sans-serif" font-size="10" fill="#38bdf8">14.9k+ ★ FOSS</text>
+
+    <rect x="20" y="145" width="130" height="65" rx="8" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+    <text x="30" y="170" font-family="sans-serif" font-size="12" fill="#e2e8f0" font-weight="bold">MaintainX</text>
+    <text x="30" y="190" font-family="sans-serif" font-size="10" fill="#a855f7">$3.6B Acquisition</text>
+
+    <rect x="170" y="145" width="130" height="65" rx="8" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+    <text x="180" y="170" font-family="sans-serif" font-size="12" fill="#e2e8f0" font-weight="bold">NetBox</text>
+    <text x="180" y="190" font-family="sans-serif" font-size="10" fill="#38bdf8">21.6k+ ★ DCIM</text>
+  </g>
+
+  <!-- Foreground Title and Subtitle -->
+  <g transform="translate(60, 110)">
+    <!-- Pill Badge -->
+    <rect width="280" height="32" rx="16" fill="#1e293b" stroke="#38bdf8" stroke-width="1" />
+    <text x="16" y="21" class="badge-text">📦 Enterprise Asset Management</text>
+
+    <!-- Title -->
+    <text x="0" y="85" class="title" filter="url(#glow)">Awesome EAM &amp; CMMS</text>
+    
+    <!-- Subtitle -->
+    <text x="0" y="125" class="subtitle">Curated SaaS Platforms &amp; Open-Source Solutions</text>
+    <text x="0" y="155" class="subtitle" font-size="15" fill="#64748b">Lifecycle Tracking • Preventive Maintenance • Work Orders • Infrastructure</text>
+  </g>
+</svg>
